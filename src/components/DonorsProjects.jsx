@@ -12,6 +12,9 @@ const DashboardProjects = () => {
                     Voted Projects
                 </button>
                 <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
+                    Funded Projects
+                </button>
+                <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
                     Available Projects
                 </button>
             </div>
