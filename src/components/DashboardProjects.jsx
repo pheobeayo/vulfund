@@ -9,7 +9,7 @@ const DashboardProjects = () => {
                 Funding Requests
                 </button>
                 <button className="bg-white hover:bg-[#DA8450] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
-                   My Projects
+                   Funded Project
                 </button>
             </div>
             <div className="bg-white flex gap-10 md:flex md:flex-row mx-8">

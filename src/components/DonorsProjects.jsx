@@ -9,14 +9,15 @@ const DashboardProjects = () => {
                     All Projects
                 </button>
                 <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
+                    Available Projects
+                </button>
+                <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
                     Voted Projects
                 </button>
                 <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
                     Funded Projects
                 </button>
-                <button className="bg-white hover:bg-[#FF7827] text-[#110A03] border-[#110A03] border-2 font-bold py-2 px-4 rounded">
-                    Available Projects
-                </button>
+               
             </div>
             <div className="bg-white flex gap-10 md:flex md:flex-row mx-8">
                 <div className="content-card bg-white w-full md:w-[32%] max-w-sm  border border-gray-200 rounded-lg shadow">
