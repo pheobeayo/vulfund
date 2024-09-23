@@ -3,7 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import bg1 from "../assets/bg1.svg";
 import bg2 from "../assets/bg2.svg";
 import bg3 from "../assets/bg3.svg";
-import bg4 from "../assets/bg4.svg";
+
 
 
 export function BackgroundCarousel() {
@@ -16,10 +16,7 @@ export function BackgroundCarousel() {
       autoPlay
       
     >
-      <div >
-        <img alt="bg4" src={bg4}  />
-
-      </div>
+     
       <div>
         <img alt="bg2" src={bg2} />
 

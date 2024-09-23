@@ -35,18 +35,18 @@ const Hero = () => {
                                     <div className="py-1">
                                         <MenuItem>
                                             <Link
-                                                to="/donorsdashboard"
+                                                to="/dashboard"
                                                 className="block px-4 py-2 text-sm text-[#DA8450] data-[focus]:bg-[#DA8450] data-[focus]:text-white"
                                             >
-                                                Sign up as an Organization
+                                                Proceed as a Requesting Organization
                                             </Link>
                                         </MenuItem>
                                         <MenuItem>
                                             <Link
-                                                href="#"
+                                                 to="/donorsdashboard"
                                                 className="block px-4 py-2 text-sm text-[#DA8450] data-[focus]:bg-[#DA8450] data-[focus]:text-white"
                                             >
-                                                Sign up as a Funder
+                                                Proceed as a Donor
                                             </Link>
                                         </MenuItem>
 
