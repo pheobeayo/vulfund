@@ -43,14 +43,12 @@ const Header = () => {
                         Dao Community
                     </NavLink>
                 </nav>
-                <NavLink to='/sign_in'>  <button className="bg-[#DA8450] hover:bg-[#110A03] text-white font-bold py-2 px-4  rounded">
-                    Connect Wallet
-                </button> </NavLink>
+                <w3m-button />
             </div>
             <div className="w-[95%] mx-auto flex justify-between lg:hidden md:hidden relative">
                 <img src={logo} alt="" className="w-[185px] h-[43px]" />
-                <Hamburger toggled={isOpen} toggle={setOpen} color="#427142" direction="right" />
-                {isOpen && (<nav className="flex flex-col bg-white p-8 py-12 h-[100vh] w-[100%] absolute top-20 left-0 bg-baseBlack/70 z-50">
+                <Hamburger toggled={isOpen} toggle={setOpen} color="#DA8450" direction="right" />
+                {isOpen && (<nav className="flex flex-col bg-gradient-to-r from-[#110A03] via-[#110A03] to-[#DA8450] p-8 py-12 h-[100vh] w-[100%] absolute top-20 left-0 bg-baseBlack/70 z-50">
                     <NavLink
                         to="/"
                         className="text-white hover:text-[#FF7827] hover:font-[700] mb-6 text-[18px]"
@@ -82,9 +80,7 @@ const Header = () => {
                         Dao Community
                     </NavLink>
                     <div className="mt-6">
-                        <NavLink to='/sign_in'>  <button className="bg-[#DA8450] hover:bg-[#110A03] text-white font-bold py-2 px-4  rounded">
-                            Connect Wallet
-                        </button> </NavLink>
+                    <w3m-button />
                     </div>
                 </nav>)}
             </div>

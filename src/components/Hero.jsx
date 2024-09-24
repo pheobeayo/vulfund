@@ -35,7 +35,7 @@ const Hero = () => {
                                     <div className="py-1">
                                         <MenuItem>
                                             <Link
-                                                to="/dashboard"
+                                                to="/sign_in"
                                                 className="block px-4 py-2 text-sm text-[#DA8450] data-[focus]:bg-[#DA8450] data-[focus]:text-white"
                                             >
                                                 Proceed as a Requesting Organization

@@ -1,13 +1,14 @@
 import  { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import { CgHomeAlt } from "react-icons/cg";
+import { LuCircleDollarSign } from "react-icons/lu";
 import { GoProjectSymlink } from "react-icons/go";
 import { TbSettings } from "react-icons/tb";
-import { GiReceiveMoney } from "react-icons/gi";
+import { CgCommunity } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/logo.svg'
 
-const MobileSidebar = () => {
+const DonorMobileSidebar = () => {
   const [isOpen, setOpen] = useState(false);
 
 
@@ -37,18 +38,19 @@ const MobileSidebar = () => {
             < GoProjectSymlink className="mr-4" /> Projects
           </NavLink>
           <NavLink
-            to="request_fund"
+            to="donate"
             className="text-[14px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#DA8450]"
             
           >
-            <GiReceiveMoney  className="mr-4" /> Request Fund
+            < LuCircleDollarSign className="mr-4" />
+            Donate
           </NavLink>
-          <NavLink
-            to="/funded-projects"
+         <NavLink
+            to="dao"
             className="text-[14px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#DA8450]"
            
           >
-            < GoProjectSymlink className="mr-4" />Funded Projects
+            < CgCommunity className="mr-4" /> Dao
           </NavLink>
           <button className="text-[14px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#DA8450]">
             <TbSettings className="mr-4" /> Log out
@@ -59,4 +61,4 @@ const MobileSidebar = () => {
   );
 };
 
-export default MobileSidebar;
+export default DonorMobileSidebar;
