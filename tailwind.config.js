@@ -8,6 +8,10 @@ export default {
            
   theme: {
     extend: {
+      fontFamily: {
+        'opensans': ["Open Sans"," sans-serif"],
+        'titiliumweb': ["Titillium Web"," sans-serif"]
+      },
       animation: {
         marquee: 'marquee 25s linear infinite',
 

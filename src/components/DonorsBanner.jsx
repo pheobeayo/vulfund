@@ -8,7 +8,7 @@ const Banner = () => {
                 <h2 className='lg:text-[24px] md:text-[24px] text-[18px] font-bold mb-4'>Vulfund - where blockchain meets transparency</h2>
                 <p>facilitate transparent and impactful crowdfunding for disadvantaged individuals and institutions in Africa across Africa</p>
                 <div className='mt-6'>
-                    <NavLink to='/dashboard/donate' className="bg-[#DA8450] text-white py-2 px-4 rounded-lg lg:text-[20px] md:text-[20px] font-bold text-[16px] w-[100%] lg:w-[50%] md:w-[50%] my-2 hover:bg-green-300 hover:font-bold">Donate</NavLink>
+                    <NavLink to='/dashboard/donate' className="bg-[#DA8450] text-white py-2 px-4 rounded-lg lg:text-[20px] md:text-[20px] font-bold text-[16px] w-[100%] lg:w-[50%] md:w-[50%] my-2 hover:bg-[#110A03] hover:font-bold">Donate</NavLink>
                     
                 </div>
             </div>

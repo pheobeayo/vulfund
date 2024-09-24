@@ -19,63 +19,67 @@ const DashboardProjects = () => {
                 </button>
                
             </div>
-            <div className="bg-white flex gap-10 md:flex md:flex-row mx-8">
-                <div className="content-card bg-white w-full md:w-[32%] max-w-sm  border border-gray-200 rounded-lg shadow">
-                    <img src={projectphoto} alt="projectphoto" className="rounded-t-lg" />
-                    <div className="w-full h-1/2 px-8">
-                        <h3 className="text-[#110A03] text-[14px] font-bold leading-loose ">
+            <div className='lg:w-[90%] md:w-[90%] w-[100%] mx-auto py-12 px-4 lg:px-0 md:px-0'>
+                <div className="grid place-items-center text-4xl font-bold text-white p-10"> Projects</div>
+                <div className="flex lg:flex-row md:flex-row flex-col justify-between items-center flex-wrap">
+                    <div className="bg-white lg:w-[32%] md:w-[32%] w-[100%] p-4 border border-gray-200 rounded-lg mb-4 shadow-lg">
+                        <img src={projectphoto} alt="projectphoto" className="w-[100%] h-[237px] object-cover object-center rounded-lg " />
+
+                        <h3 className="text-[#110A03] font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb ">
                             The Heavens Orphanage Home
                         </h3>
-                        <p className="text-[#3B3B3B] text-[13px] font-normal pb-2 text-justify">
+                        <p className="text-[#3B3B3B] lg:text-[15px] md:text-[15px] text-[13px] font-normal text-justify">
                             We are commited to provide Love, support and opportunities for orphaned children
                             who have faced unimaginable challenges at young age
                         </p>
-                        <h3 className="text-[#110A03] text-[13px] font-bold leading-loose ">
+                        <h3 className="text-[#110A03] lg:text-[15px] md:text-[15px] text-[13px] font-bold ">
                             Amount Needed: $300
                         </h3>
-                        <button className="bg-[#110A03] hover:bg-[#DA8450] text-white font-bold py-2 px-4 rounded">
+                         <button className="bg-[#110A03] hover:bg-[#11785A] text-white font-bold py-2 px-4  rounded">
                             View details
                         </button>
+                    
+
                     </div>
-                </div>
 
 
 
-                <div className="content-card bg-white w-full md:w-[32%] max-w-sm  border border-gray-200 rounded-lg shadow">
-                    <img src={projectphoto2} alt="projectphoto2" className="rounded-t-lg" />
-                    <div className="w-full h-1/2 px-8">
-                        <h3 className="text-[#110A03] text-[14px] font-bold leading-loose ">
+                    <div className="bg-white lg:w-[32%] md:w-[32%] w-[100%] p-4 border border-gray-200 rounded-lg mb-4 shadow-lg">
+                        <img src={projectphoto2} alt="projectphoto2" className="w-[100%] h-[237px] object-cover object-center rounded-lg" />
+
+                        <h3 className="text-[#110A03] font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb ">
                             The  Safeplace  Home for elderly
                         </h3>
-                        <p className="text-[#3B3B3B] text-[13px] font-normal text-justify">
+                        <p className="text-[#3B3B3B] lg:text-[15px] md:text-[15px] text-[13px] font-normal text-justify">
                             We are commited to provide Love, support and opportunities for orphaned children who have
                             faced unimaginable challenges at young age
                         </p>
-                        <h3 className="text-[#110A03] text-[13px] font-bold leading-loose ">
+                        <h3 className="text-[#110A03] lg:text-[15px] md:text-[15px] text-[13px] font-bold">
                             Amount Needed: $300
                         </h3>
-                        <button className="bg-[#110A03] hover:bg-[#DA8450] text-white font-bold py-2 px-4  rounded">
+                        <button className="bg-[#110A03] hover:bg-[#11785A] text-white font-bold py-2 px-4  rounded">
                             View details
                         </button>
-                    </div>
-                </div>
 
-                <div className="content-card bg-white w-full md:w-[32%] max-w-sm  border border-gray-200 rounded-lg shadow">
-                    <img src={projectphoto} alt="projectphoto" className="rounded-t-lg " />
-                    <div className="w-full h-1/2 px-8">
-                        <h3 className="text-[#110A03] text-[14px] font-bold leading-loose ">
+                    </div>
+
+                    <div className="bg-white lg:w-[32%] md:w-[32%] w-[100%] p-4 border border-gray-200 rounded-lg mb-4 shadow-lg">
+                        <img src={projectphoto} alt="projectphoto" className="w-[100%] h-[237px] object-cover object-center rounded-lg" />
+
+                        <h3 className="text-[#110A03] font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb ">
                             The Heavens Orphanage Home
                         </h3>
-                        <p className="text-[#3B3B3B] text-[13px] font-normal text-justify">
+                        <p className="text-[#3B3B3B] lg:text-[15px] md:text-[15px] text-[13px] font-normal text-justify">
                             We are commited to provide Love, support and opportunities for orphaned children
                             who have faced unimaginable challenges at young age
                         </p>
-                        <h3 className="text-[#110A03] text-[13px] font-bold leading-loose ">
+                        <h3 className="text-[#110A03] lg:text-[15px] md:text-[15px] text-[13px] font-bold">
                             Amount Needed: $300
                         </h3>
-                        <button className="bg-[#110A03] hover:bg-[#DA8450] text-white font-bold py-2 px-4  rounded">
+                        <button className="bg-[#110A03] hover:bg-[#11785A] text-white font-bold py-2 px-4  rounded">
                             View details
                         </button>
+
                     </div>
                 </div>
             </div>
