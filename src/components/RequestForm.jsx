@@ -58,7 +58,8 @@ const RequestForm = () => {
       setUserAddress("")
     }
   }
-console.log(amount)
+
+
   return (
     <main className="bg-white">
       <div className="w-1/2 mx-auto mt-20">
