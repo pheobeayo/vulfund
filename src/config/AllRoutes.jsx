@@ -19,11 +19,11 @@ import PageLoader from "../components/Loader/PageLoader";
 const Home = lazy(() => import("../pages/Home"));
 const HomeLayout = lazy(() => import('../layout/HomeLayout'));
 const Signin = lazy(() => import('../pages/Signin'))
-const DashboardLayout = lazy(() => import('../layout/DashboardLayout'));
-const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
-const Projects = lazy(() => import("../pages/dashboard/Projects"));
+// const DashboardLayout = lazy(() => import('../layout/DashboardLayout'));
+// const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
+// const Projects = lazy(() => import("../pages/dashboard/Projects"));
 const Donate = lazy(() => import("../pages/donordashboard/Donate"));
-const RequestFund = lazy(() => import("../pages/dashboard/RequestFund"));
+const RequestFund = lazy(() => import("../pages/donordashboard/RequestFund"));
 const ProjectDetails = lazy(() => import("../pages/dashboard/ProjectDetails"));
 const AboutUs = lazy(() => import("../pages/About_us"));
 const Dao = lazy(() => import("../pages/donordashboard/Dao"));
@@ -38,20 +38,20 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<HomeLayout />} >
       <Route index element={<Home />} />
       <Route path='/about_us' element={<AboutUs />} />
-      <Route path='/sign_in' element={<Signin />} />
     </Route>
-    <Route path='/dashboard' element={<DashboardLayout />} >
+    {/* <Route path='/dashboard' element={<DashboardLayout />} >
       <Route index element={<Dashboard />} />
       <Route path='projects' element={<Projects />} />
-      <Route path='request_fund' element={<RequestFund />} />
-      <Route path="project-details" element={<ProjectDetails />} />
-    </Route>
+    </Route> */}
     
-    <Route path='/donorsdashboard' element={<DonorsDashboardLayout />} >
+    <Route path='/dashboard' element={<DonorsDashboardLayout />} >
       <Route index element={<DonorsDashboard />} />
+      <Route path='request_fund' element={<RequestFund />} />
       <Route path='projects' element={<DonorsProjects />} />
+      <Route path="project-details" element={<ProjectDetails />} />
       <Route path='donate' element={<Donate />} />
       <Route path='dao' element={<Dao />} />
+      <Route path='signin' element={<Signin />} />
     </Route>
   </Route>
 
