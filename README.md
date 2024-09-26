@@ -33,18 +33,19 @@ Majorly are global donors and African beneficiaries
 Polygon, Foundry, Typescript, Bash, Tenderly, Solidity, Vite, react, Tailwind css, Web3 modal, Pinata, Ipfs etc
 
 
-## Deployed Address on Polygon Amoy: 0x070F11A76F6a271E4e5B8c01fc573ad592823193 
+## Deployed Address on Polygon Amoy: 
+0x070F11A76F6a271E4e5B8c01fc573ad592823193 
 
 
 ## Pitchdeck:
 
 https://www.canva.com/design/DAGRwQ2PuEo/DBXuQPdVLddwbZZFmEElzA/view?utm_content=DAGRwQ2PuEo&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
-Demo Video:
+## Demo Video:
 
 ### Team Information:
 1. Clementina Odegha - Product Manager
-2. Babalola Yinka - Product Designer
+2. Adetoro Odun - Product Designer
 3. Sanni Ifeoluwa - Frontend Developer
 4. Atoyebi Kemi - Frontend Developer
 5. Adewale Iyanuoluwa - Smart Contract Developer
