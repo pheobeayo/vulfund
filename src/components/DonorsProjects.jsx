@@ -83,9 +83,9 @@ const DonorsProjects = () => {
                   <p className="text-[#110A03] font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] capitalise font-titiliumweb ">...</p>
                 )}
 
-               {address === item.beneficiary ? ( <p className="text-[#3B3B3B] lg:text-[15px] md:text-[15px] text-[13px] font-normal text-justify">
+                <p className="text-[#3B3B3B] lg:text-[15px] md:text-[15px] text-[13px] font-normal text-justify">
                 {item.description.slice(0, 30)}...
-                </p>) : (<p>...</p>)}
+                </p>
                 <h3 className="text-[#110A03] lg:text-[15px] md:text-[15px] text-[13px] font-bold">
                   Amount Needed: {convertToWholeNumber(item.amount)} Matic
                 </h3>

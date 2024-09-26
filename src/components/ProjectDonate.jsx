@@ -16,7 +16,7 @@ const ProjectDonate = () => {
                             USD
                         </button>
                     </span>
-                    <input type="text" id="amount" className="rounded-none rounded-e-lg bg-white border border-[#110A03] text-gray-900  block flex-1 min-w-0 w-full text-sm p-2.5  dark:placeholder-gray-400 dark:text-white " placeholder="Enter donation amount" onChange={(e) => setAmount(e.target.value)} />
+                    <input type="text" className="rounded-none rounded-e-lg bg-white border border-[#110A03] text-gray-900  block flex-1 min-w-0 w-full text-sm p-2.5 " placeholder="Enter donation amount" onChange={(e) => setAmount(e.target.value)} />
                 </div>
                 <p className="text-[#110A03] font-serif font-bold text-xl mt-4 mb-4">Become a DAO member, donate $100 and above</p>
                 <DonateFunds amount={amount} setAmount={setAmount} />

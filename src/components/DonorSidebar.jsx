@@ -8,9 +8,11 @@ import logo from "../assets/logo.svg";
 import useGetOrganization from "../Hooks/useGetOrganization";
 import { GiReceiveMoney } from "react-icons/gi";
 import { MdCreateNewFolder } from "react-icons/md";
+import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 
 const DonorSidebar = () => {
   const allOrganization = useGetOrganization();
+  const { address } = useWeb3ModalAccount();
 
   const activeStyle = {
     borderLeft: "1px solid #DA8450",
@@ -48,7 +50,7 @@ const DonorSidebar = () => {
         <LuCircleDollarSign className="mr-4" />
         Donate
       </NavLink>
-      {allOrganization.length > 0 && (
+      {allOrganization[0] === address && (
         <NavLink
           to="request_fund"
           className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
@@ -57,13 +59,16 @@ const DonorSidebar = () => {
           <GiReceiveMoney className="mr-4" /> Request Funds
         </NavLink>
       )}
+
+      {allOrganization[0] === address && (
         <NavLink
-        to="organization"
-        className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
-        style={({ isActive }) => (isActive ? activeStyle : null)}
-      >
-        <CgCommunity className="mr-4" /> Organization
-      </NavLink>
+          to="organization"
+          className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+        >
+          <CgCommunity className="mr-4" /> Organization
+        </NavLink>
+      )}
       <NavLink
         to="dao"
         className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
@@ -71,7 +76,7 @@ const DonorSidebar = () => {
       >
         <CgCommunity className="mr-4" /> Dao
       </NavLink>
-      {allOrganization.length === 0 && (
+      {allOrganization[0] !== address && (
         <NavLink
           to="signin"
           className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
