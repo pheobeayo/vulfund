@@ -1,67 +1,61 @@
-import { useCallback, useEffect, useState } from "react";
+// src/Hooks/useGetProposals.js
+
+import { useEffect, useState } from "react";
 import { readOnlyProvider } from "../constants/providers";
 import { getVulfundContract } from "../constants/contract";
-import { wssProvider } from "../constants/providers";
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
-import { ethers } from "ethers";
+import { formatUnits } from "ethers";
 
 const useGetProposals = () => {
-    const [allProposals, setAllProposals] = useState([]);
-    const [count, setCount] = useState(0);
-    const { address } = useWeb3ModalAccount()
+  const [allProposals, setAllProposals] = useState([]); // Initialize as an empty array
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { address } = useWeb3ModalAccount(); // Get user address
 
-    const convertIpfsUrl = (url) => {
-        if (url.startsWith("ipfs://")) {
-            return url.replace("ipfs://", "https://ipfs.io/ipfs/");
-        }
-        return url;
-    };
+  useEffect(() => {
+    const fetchEvents = async () => {
+      if (!address) {
+        console.log("No address available. Skipping fetchEvents.");
+        setLoading(false);
+        return;
+      }
 
-    const fetchAllProposals = useCallback(async () => {
-        try {
-            const contract = getVulfundContract(readOnlyProvider);
-            const res = await contract.orgProfiles(address);
-            // const converted = res?.map((item, index)=>{
-            //     return{
-            //   }      
-            // }) 
-            setAllProposals(res)
-        } catch (error) {
-            console.error(error);
-        }
-    }, []);
+      try {
+        const contract = getVulfundContract(readOnlyProvider);
+        const deploymentBlockNumber = 12360578; // Replace with your contract's deployment block
 
-    const trackingProposals = useCallback(() => {
-        setCount((prevValue) => prevValue + 1);
-        fetchAllProposals();
-    }, [fetchAllProposals]);
+        const filter = contract.filters.ProposalCreated();
+        const events = await contract.queryFilter(
+          filter,
+          deploymentBlockNumber,
+          "latest"
+        );
 
-
-    useEffect(() => {
-        fetchAllProposals();
-
-        const filter = {
-            address: import.meta.env.VITE_CONTRACT_ADDRESS ,
-            topics: [ethers.id("ProposalCreated(uint,address,string,address,uint)")],
-        };
-
-        wssProvider.getLogs({ ...filter, fromBlock: 12360578 }).then((events) => {
-            setCount(events.length + 1);
+        const convertedProposals = events.map((event) => {
+          const { args } = event;
+          return {
+            id: Number(args[0]), 
+            beneficiary: args[1],
+            description: args[2],
+            recipient: args[3],
+            amount: formatUnits(args[4], 18), 
+          };
         });
 
-        const provider = new ethers.WebSocketProvider(
-            import.meta.env.VITE_WSS_AMOY_RPC
-        );
-        provider.on(filter, trackingProposals);
+        setAllProposals(convertedProposals);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching proposals:", err);
+        setError(err);
+        setAllProposals([]); // Reset to empty array on error
+        setLoading(false);
+      }
+    };
 
-        return () => {
-            // Perform cleanup
-            provider.off(filter, trackingProposals);
-        };
+    fetchEvents();
+  }, [address]); // Re-run when address changes
 
-    }, [fetchAllProposals, trackingProposals, count]);
-
-    return allProposals;
-}
+  return { allProposals, loading, error };
+};
 
 export default useGetProposals;

@@ -11,7 +11,6 @@ import { MdCreateNewFolder } from "react-icons/md";
 
 const DonorSidebar = () => {
   const allOrganization = useGetOrganization();
-  console.log(allOrganization.length);
 
   const activeStyle = {
     borderLeft: "1px solid #DA8450",
@@ -58,6 +57,13 @@ const DonorSidebar = () => {
           <GiReceiveMoney className="mr-4" /> Request Funds
         </NavLink>
       )}
+        <NavLink
+        to="organization"
+        className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
+        style={({ isActive }) => (isActive ? activeStyle : null)}
+      >
+        <CgCommunity className="mr-4" /> Organization
+      </NavLink>
       <NavLink
         to="dao"
         className="text-[16px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#FF7827]"
