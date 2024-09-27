@@ -40,7 +40,7 @@ Polygon, Foundry, Typescript, Bash, Tenderly, Solidity, Vite, react, Tailwind cs
 
 
 ## Deployed Address on Polygon Amoy: 
-0x070F11A76F6a271E4e5B8c01fc573ad592823193 
+0xd8f85F2562A1cB857cD4345A6812e42245c9765e
 
 
 ## Pitchdeck:
