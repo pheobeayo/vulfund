@@ -47,7 +47,10 @@ Polygon, Foundry, Typescript, Bash, Tenderly, Solidity, Vite, react, Tailwind cs
 
 https://www.canva.com/design/DAGRwQ2PuEo/DBXuQPdVLddwbZZFmEElzA/view?utm_content=DAGRwQ2PuEo&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
-## Demo Video:
+## Demo Video: 
+
+https://youtu.be/nf0r_IG8gC4
+
 
 ### Team Information:
 1. Clementina Odegha - Product Manager
